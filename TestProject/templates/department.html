@@ -1,0 +1,19 @@
+{% extends 'base.html'%} 
+{%block title%} 
+Department 
+{%endblock%} 
+{%block content%}
+<h1 class="text-center">Department</h1>
+<hr />
+<div class="jumbotron jumbotron-fluid d-flex justify-content-center  ">
+{% for d in dept %}
+
+  <div class="container text-center bg-info  text-white m-2">
+    <h1 class="display-4">{{d.dep_name}}</h1>
+    <p class="lead">{{d.dep_descriptions}}</p>
+  </div>
+{% endfor %}
+</div>
+
+
+{% endblock%}
