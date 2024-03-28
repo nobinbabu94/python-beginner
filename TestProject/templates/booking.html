@@ -1,8 +1,14 @@
-{% extends 'base.html'%}
-{%block title%}
-Booking
-{%endblock%}
+{% extends 'base.html'%} 
+{% load crispy_forms_tags %}
+{%block title%} Booking {%endblock%} {%block content%}
+<h1 class="text-center">Booking</h1>
+<hr />
 
-{%block content%}
-<h1>Booking</h1>
+<div class="d-flex justify-content-center w-20  text-center">
+  <form action="" class="w-20 d-flex flex-column ">
+   {{form |crispy}}
+
+    <button type="submit" class='mt-2'>Submit</button>
+  </form>
+</div>
 {% endblock%}
