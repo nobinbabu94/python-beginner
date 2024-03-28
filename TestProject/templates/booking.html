@@ -5,10 +5,11 @@
 <hr />
 
 <div class="d-flex justify-content-center w-20  text-center">
-  <form action="" class="w-20 d-flex flex-column ">
+  <form action="" class="w-20 d-flex flex-column " method="POST">
+    {% csrf_token %}
    {{form |crispy}}
 
-    <button type="submit" class='mt-2'>Submit</button>
+    <button type="submit" class='mt-2 bg-primary text-white border border-0'>Submit</button>
   </form>
 </div>
 {% endblock%}
